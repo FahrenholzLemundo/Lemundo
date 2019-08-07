@@ -3,6 +3,7 @@
 ## pre: creation of certs
 ## openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout server.key -out server.crt
 ## and adding it to allowed certs
+## and add port 443 to docker-compose.yml
 ##
 docker exec --user root deinebaustoffe_apache_1 mkdir -p -m 700 /etc/apache2/ssl/server.crt
 docker exec -it deinebaustoffe_apache_1 a2enmod ssl
